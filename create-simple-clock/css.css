@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(night.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:51px;
+    padding: 10px;
+    color: #fff;
+    width: 270px;
+    height: 150px;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    box-shadow: 
+    5px 5px 2px rgba(255, 255, 255, .1),
+    -5px -5px 2px rgba(255, 255, 255, .1);
+    border-radius: 10px;
+    animation: up-down 7s linear infinite;
+}
+@keyframes up-down{
+    0%, 100%{
+        transform: translateY(0) scale(1);
+    }
+    50%{
+        transform: translateY(-50px) scale(1.3);
+    }
+}
